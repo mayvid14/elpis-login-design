@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <title>ElpisDesign Round 2</title>
+  </head>
+  <body ng-app="closr">
+
+    <div layout="row" layout-sm="column">
+      <md-content flex>
+        <div flex>
+          <img src="350x250.png" alt="">
+        </div>
+        </md-content>
+      <md-content flex>
+        <div flex>
+          <md-card>
+            <form name="login">
+              <md-input-container class="md-block"  flex-offset="15" flex="70">
+              <label>Email</label>
+              <input ng-model="em" type="email" required md-no-asterisk name="em">
+              <div ng-messages="login.em.$error">
+                <div ng-message="required">
+                  This is required
+                </div>
+                <div ng-message="email">
+                  Enter valid email id
+                </div>
+              </div>
+            </md-input-container>
+            <md-input-container class="md-block"  flex-offset="15" flex="70">
+              <label>Password</label>
+              <input ng-model="pw" type="password" required md-no-asterisk name="pw" minlength="8">
+              <div ng-messages="login.pw.$error">
+                <div ng-message="required">
+                  This is required
+                </div>
+                <div ng-message="minlength">
+                  Password too short!
+                </div>
+              </div>
+            </md-input-container>
+            </form>
+          <md-button class="md-raised md-primary" flex-offset="15" flex="70">CONNECT</md-button>
+          <md-button md-no-ink class="md-primary" flex-offset="15" flex="70">Forgot your password - Question?</md-button>
+        </md-card>
+        </div>
+      </md-content>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="config.js" charset="utf-8"></script>
+  </body>
+</html>
