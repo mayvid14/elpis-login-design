@@ -14,6 +14,6 @@
     "angular-aria": "^1.6.7",
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.7",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
